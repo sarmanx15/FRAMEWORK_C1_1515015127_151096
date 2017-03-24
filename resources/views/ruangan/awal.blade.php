@@ -13,6 +13,7 @@
 			<tr>
 				<th>No.</th>
 				<th>Nama</th>
+				<th>Aksi</th>
 			</tr>
 			</thead>
 			<tbody>
