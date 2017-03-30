@@ -34,46 +34,60 @@
 						<span class="icon-bar"></span>
 					</button>
 					
-					<a class="navbar-brand" href="{{url('/')}}">
-					<i class="fa fa-usb" style="color:#0088FC"></i>
-					Laravel-5</a>
+					<a class="navbar-brand" href="{{url('/')}}" style="color: #FE3C00">
+					<i class="fa fa-fire" style="color:#FF0000"></i>
+					Pemrograman Framework
+					<i class="fa fa-fire" style="color:#FF0000"></i>
+					</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li class="dropdown active">
-							<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mahasiswa
+							<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-user" style="color:#535353"></i>
+							 Mahasiswa
 							<span class="caret"></span></a>
 							<ul class="dropdown-menu" aria-labelledby="dLabel">
-								<li><a href="{{url('mahasiswa')}}">Data Mahasiswa</a></li>
+								<li><a href="{{url('mahasiswa')}}">
+								<i class="fa fa-list" style="color:#535353"></i> Data Mahasiswa</a></li>
+								<li class="divider"></li>
+								<li><a href="{{url('jadwal_matakuliah')}}">
+								<i class="fa fa-calendar" style="color:#535353"></i> Jadwal Mata Kuliah</a></li>
 							</ul>
 						</li>
 						<li class="dropdown active">
-							<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dosen
+							<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-user" style="color:#535353"></i> Dosen
 							<span class="caret"></span></a>
 							<ul class="dropdown-menu" aria-labelledby="dLabel">
 								<li>
-									<a href="{{url('dosen')}}">Data Dosen</a>
+									<a href="{{url('dosen')}}">
+									<i class="fa fa-list" style="color:#535353"></i> Data Dosen</a>
 								</li>
 								<li class="divider"></li>
-								<li><a href="{{url('dosen_matakuliah')}}">Jadwal Dosen Mengajar</a></li>
+								<li><a href="{{url('dosen_matakuliah')}}">
+								<i class="fa fa-calendar" style="color:#535353"></i> Jadwal Dosen Mengajar</a></li>
 							</ul>
 						</li>
 						<li class="dropdown active">
-							<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pengaturan
+							<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-gear" style="color:#535353"></i> Pengaturan
 							<span class="caret"></span></a>
 							<ul class="dropdown-menu" aria-labelledby="dLabel">
-								<li>
+								<li >
 
 									<a href="{{url('pengguna')}}">
-									<i class="fa fa-user" style="color:#0088FC"></i> Pengguna</a>
+									<i class="fa fa-user" style="color:#535353"></i> Pengguna</a>
 								</li>
-								<li>
+								<li class="divider"></li>
+								<li >
 									<a href="{{url('ruangan')}}">
-									<i class="fa fa-square" style="color:#0088FC"></i>  Ruangan</a>
+									<i class="fa fa-square" style="color:#535353"></i>  Ruangan</a>
 								</li>
-								<li>
+								<li class="divider"></li>
+								<li >
 									<a href="{{url('matakuliah')}}">
-									<i class="fa fa-book" style="color:#0088FC"></i>  Matakuliah</a>
+									<i class="fa fa-book" style="color:#535353"></i>  Matakuliah</a>
 								</li>
 							</ul>
 						</li>
@@ -95,7 +109,7 @@
 		<nav class="navbar navbar-default navbar-fixed-bottom">
 		<footer class="container">
 			<!-- Please dont delete this -->
-			Recreate by <a href="https://www.instagram.com/xmsn_/"><span><i class="fa fa-instagram" style="color:#3452D2"></i> Muhammad Sarman Noorlah</span></a>
+			Modified by <a href="https://www.instagram.com/xmsn_/"><span><i class="fa fa-instagram" style="color:#3452D2"></i> Muhammad Sarman Noorlah</span></a>
 			<!-- Please dont delete this-->
 		</footer>
 		</nav>
