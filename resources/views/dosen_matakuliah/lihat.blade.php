@@ -3,7 +3,7 @@
 <div class="panel panel-warning">
 	<div class="panel-heading">
 		<strong>
-			<a href="{{url('dosen_matakuliah')}}>
+			<a href="{{url('dosen_matakuliah')}}">
 				<i style="color: #5171D8" class="fa text-default fa-chevron-left"></i>
 			</a>
 			Detail Data Dosen Mata Kuliah

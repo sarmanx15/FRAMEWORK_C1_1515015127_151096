@@ -84,6 +84,7 @@ Route::post('dosen/edit/{dosen}','DosenController@update');
 Route::get('dosen/hapus/{dosen}','DosenController@hapus');
 
 Route::get('dosen_matakuliah','Dosen_MatakuliahController@awal');
+Route::get('/','Dosen_MatakuliahController@awal');
 Route::get('dosen_matakuliah/tambah','Dosen_MatakuliahController@tambah');
 Route::get('dosen_matakuliah/lihat/{dosen_matakuliah}','Dosen_MatakuliahController@lihat');
 Route::post('dosen_matakuliah/simpan','Dosen_MatakuliahController@simpan');
