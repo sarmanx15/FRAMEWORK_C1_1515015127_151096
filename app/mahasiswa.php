@@ -13,7 +13,7 @@ class mahasiswa extends Model
 
     public function pengguna(){
 
-    	return $this->belongTo(pengguna::class);
+    	return $this->belongsTo(pengguna::class);
     }
 
     public function jadwalmatakuliah(){

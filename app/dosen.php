@@ -11,7 +11,7 @@ class dosen extends Model
     protected $guarded = ['id'];
     public function pengguna(){
 
-    	return $this->belongTo(pengguna::class);
+    	return $this->belongsTo(pengguna::class);
     }
 
     public function dosen_matakuliah(){

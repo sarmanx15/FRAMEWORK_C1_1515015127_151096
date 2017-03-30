@@ -12,12 +12,12 @@ class dosen_matakuliah extends Model
     protected $guarded =['id'];
     public function dosen(){
 
-    	return $this->belongTo(dosen::class);
+    	return $this->belongsTo(dosen::class);
 
     }
 
     public function matakuliah(){
-    	return $this->belongToMany(matakuliah::class);
+    	return $this->belongsToMany(matakuliah::class);
     }
 
     

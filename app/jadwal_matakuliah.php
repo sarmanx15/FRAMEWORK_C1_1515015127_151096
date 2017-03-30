@@ -12,14 +12,14 @@ class jadwal_matakuliah extends Model
     protected $guarded = ['id'];
 
     public function dosen_matakuliah(){
-    	return $this->belongTo(dosen_matakuliah::class);
+    	return $this->belongsTo(dosen_matakuliah::class);
     } 
 
     public function ruangan(){
-		return $this->belongTo(ruangan::class);
+		return $this->belongsTo(ruangan::class);
     }
 
     public function mahasiswa(){
-    	return $this->belongTo(mahasiswa::class);
+    	return $this->belongsTo(mahasiswa::class);
     }
 }
