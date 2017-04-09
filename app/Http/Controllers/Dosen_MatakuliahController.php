@@ -6,32 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\dosen_matakuliah;
+use App\dosen;
+use App\matakuliah;
 
 class dosen_MatakuliahController extends Controller
 {
-    //
-    //  public function awal()
-    // {
-    // 	return "Hello dari Dosen_MatakuliahController";
-    // }
-
-    // public function tambah()
-    // {
-    // 	return $this->simpan();
-    // }
-    // public function simpan()
-    // {
-    // 	$dosen_matakuliah = new dosen_matakuliah();
-    // 	$dosen_matakuliah->dosen_id = '4';
-    // 	$dosen_matakuliah->matakuliah_id = '1';
-    // 	$dosen_matakuliah->save();
-    	
-    // 	return "data telah disimpan";
-    // }
-
-    public function awal()
-    {
-        return view('dosen_matakuliah.awal',['data'=>dosen_matakuliah::all()]);
+   public function awal(){
+        $semuaJadwalDosen = dosen_matakuliah::all();
+        return view('dosen_matakuliah.awal', compact('semuaJadwalDosen'));
     }
 
     public function tambah()
@@ -50,8 +32,10 @@ class dosen_MatakuliahController extends Controller
     }
 
      public function edit($id){
-        $dosen_matakuliah = dosen_matakuliah::find($id);
-        return view('dosen_matakuliah.edit')->with(array('dosen_matakuliah'=>$dosen_matakuliah));
+       $dosen_matakuliah = dosen_matakuliah::find($id);
+        $dosen = new dosen;
+        $matakuliah = new matakuliah;
+        return view('dosen_matakuliah.edit', compact('dosen','matakuliah','dosen_matakuliah'));
     }
 
 

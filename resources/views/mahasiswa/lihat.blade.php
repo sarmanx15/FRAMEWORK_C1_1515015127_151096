@@ -36,8 +36,9 @@
 			<td>{{$mahasiswa->created_at}}</td>
 		</tr>
 		<tr>
+			<td class="col-xs-4">Diperbaharui Tanggal</td>
 			<td class="col-xs-1">:</td>
-			<td>{{$mahasiswa->update_at}}</td>
+			<td>{{$mahasiswa->updated_at}}</td>
 		</tr>
 	</table>
 </div>

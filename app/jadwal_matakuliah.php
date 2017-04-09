@@ -9,6 +9,7 @@ class jadwal_matakuliah extends Model
     //
     protected $table='jadwal_matakuliah';// mendeklarasikan tabel jadwal_matakuliah
     // protected $fillable=['mahasiswa_id','ruangan_id','dosen_matakuiah_id'];
+    protected $fillable = ['mahasiswa_id','ruangan_id','dosen_matakuliah_id'];
     protected $guarded = ['id'];// mengabaikan atribut id pada saat melakikan insert/update
 
     public function dosen_matakuliah(){ // fungsi dengan nama dosen_matakuliah

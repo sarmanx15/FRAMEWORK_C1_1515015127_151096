@@ -8,7 +8,7 @@ class dosen_matakuliah extends Model
 {
     //
     protected $table='dosen_matakuliah'; //mendefinisikan nama tabel dosen_matakuliah
-    // protected $fillable=['dosen_id','matakuiah_id'];
+    protected $fillable=['dosen_id','matakuiah_id'];
     protected $guarded =['id'];//mengabaikan aribut id pada saat melakukan insert/delete oleh eloquent
     public function dosen(){ // sebuah fungsi dosen
 
@@ -23,5 +23,12 @@ class dosen_matakuliah extends Model
     
     public function jadwal_matakuliah(){ //fungsi jadwal_matakuliah
     	return $this->hasMany(jadwal_matakuliah::class,'dosen_matakuliah_id'); //memberikan nilai return dari fungsi hasMany yang merelasikan model dosen_matakuliah dengan banyak model jadwal_matakuliah dengan foreign key dosen_matakuliah_id
+    }
+    public function listDosenDanMatakuliah(){
+        $out = [];
+        foreach ($this->all() as $dsnMtk) {
+            $out[$dsnMtk->id] = "{$dsnMtk->dosen->nama} (matakuliah{$dsnMtk->matakuliah->title})";
+        }
+        return $out;
     }
 }

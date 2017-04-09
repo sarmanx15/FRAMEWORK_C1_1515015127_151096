@@ -8,7 +8,7 @@ class mahasiswa extends Model
 {
     //
     protected $table='mahasiswa'; // mendeklarasikan tabel mahasiswa
-    // protected $fillable=['nama','nim','alamat','pengguna_id'];
+    protected $fillable=['nama','nim','alamat','pengguna_id'];
     protected $guarded=['id']; // mengabaikan atribut id pada saat melakikan insert/update
 
     public function pengguna(){ // fungsi dengan nama pengguna
@@ -18,6 +18,9 @@ class mahasiswa extends Model
 
     public function jadwal_matakuliah(){ // fungsi dengan nama jadwal_matakuliah
     	return $this->hasMany(jadwal_matakuliah::class,'mahasiswa_id'); // memberika nilai return dari fungsi hasMany yang merelasikan mahasiswa dengan banyak jadwal_matakuliah dengan foreign key mahasiswa_id
+    }
+    public function getUsernameAttribute(){
+        return $this->pengguna->username;
     }
     
 }

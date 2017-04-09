@@ -36,8 +36,9 @@
 			<td>{{$dosen->created_at}}</td>
 		</tr>
 		<tr>
+			<td class="col-xs-4">Diperbaharui Tanggal</td>
 			<td class="col-xs-1">:</td>
-			<td>{{$dosen->update_at}}</td>
+			<td>{{$dosen->updated_at}}</td>
 		</tr>
 	</table>
 </div>

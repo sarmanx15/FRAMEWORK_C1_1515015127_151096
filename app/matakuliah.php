@@ -13,4 +13,11 @@ class matakuliah extends Model
     public function dosen_matakuliah(){// fungsi dengan nama dosen_matakuliah
     	return $this->hasMany(dosen_matakuliah::class,'matakuliah_id');// memberikan nillai return dari fungsi hasMany yang merelasikan matakuliah dengan banyak dosen_matakuliah dengan foreign key matakuliah_id
     }
+     public function listMahasiswaDanNim(){
+    	$out = [];
+    	foreach ($this->all() as $mhs) {
+    		$out[$mhs->id] = "{$mhs->nama} ({$mhs->nim})";
+    	}
+    	return $out;
+    }
 }
