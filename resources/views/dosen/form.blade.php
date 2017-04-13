@@ -1,25 +1,31 @@
 <div class="form-group">
-	<label class="col-sm-2 control-label">Nama</label>
+	<label class="col-sm-2 control-label" id="nama">Nama</label>
 	<div class="col-sm-10">
-		{!! Form::text('nama',null,['class'=>'form-control','placeholer'=>"Nama Mahasiswa"]) !!}
+		{!! Form::text('nama',null,['class'=>'form-control','id'=>'nama','placeholer'=>"Nama Mahasiswa"]) !!}
 	</div>
 </div>
 <div class="form-group">
-	<label class="col-sm-2 control-label">nip</label>
+	<label class="col-sm-2 control-label" id="nip">nip</label>
 	<div class="col-sm-10">
-		{!! Form::text('nip',null,['class'=>'form-control','placehodler'=>"NIP Mahasiswa"]) !!}
+		{!! Form::text('nip',null,['class'=>'form-control','id'=>'nip','placehodler'=>"NIP Mahasiswa"]) !!}
 	</div>
 </div>
 
 <div class="form-group">
-	<label class="col-sm-2 control-label">Alamat</label>
+	<label class="col-sm-2 control-label" id="alamat">Alamat</label>
 	<div class="col-sm-10">
-		{!! Form::text('alamat',null,['class'=>'form-control','placehodler'=>"Alamat Mahasiswa"]) !!}
+		{!! Form::text('alamat',null,['class'=>'form-control','id'=>'alamat','placehodler'=>"Alamat Mahasiswa"]) !!}
 	</div>
 </div>
 <div class="form-group">
-	<label class="col-sm-2 control-label">ID Pengguna</label>
+	<label class="col-sm-2 control-label">Username</label>
 	<div class="col-sm-10">
-		{!! Form::text('pengguna_id',null,['class'=>'form-control','placehodler'=>"ID Pengguna"]) !!}
+		{!! Form::text('username',null,['class'=>'form-control','placehodler'=>"Username"]) !!}
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 control-label">Password</label>
+	<div class="col-sm-10">
+		{!! Form::password('password',['class'=>'form-control','placehodler'=>"Password"]) !!}
 	</div>
 </div>

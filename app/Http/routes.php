@@ -101,3 +101,14 @@ Route::post('jadwal_matakuliah/edit/{jadwal_matakuliah}','Jadwal_MatakuliahContr
 Route::get('jadwal_matakuliah/hapus/{jadwal_matakuliah}','Jadwal_MatakuliahController@hapus');
 
 
+Route::get('ujihas','RelationshipRebornController@ujihas');
+Route::get('ujiDoesntHave','RelationshipRebornController@ujiDoesntHave');
+
+Route::get('has',function(){
+	return \App\dosen_matakuliah::whereHas('dosen',function($query){
+		$query->where('nama','like','%o%');
+	})->orWhereHas('matakuliah',function($kueri){
+		$kueri->where('title','like','%a%');
+	})->
+	with('dosen')->groupBy('dosen_id')->get();
+});

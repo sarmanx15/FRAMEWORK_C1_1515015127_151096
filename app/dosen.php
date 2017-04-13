@@ -20,5 +20,20 @@ class dosen extends Model
     public function dosen_matakuliah(){ // fungsi dengan nama dosen_matakuliah
     	return $this->hasMany(dosen_matakuliah::class,'dosen_id');// model dosen_matakuliah yang mempunyai nilai return dari fungsi hasMany yang merelasikan dosen dengan banyak dosen_matakuliah dengan dosen_id sebagai foreign key nya
     }
+     public function getUsernameAttribute(){
+        return $this->pengguna->username;
+    }
+    public function getPasswordAttribute(){
+        return $this->pengguna->password;
+    }
     
+    public function listDosenDanNip(){
+        $out = [];
+        foreach ($this->all() as $dsn) {
+            $out[$dsn->id] = "{$dsn->nama} ({$dsn->nip})";
+            # code...
+        }
+        return $out;
+    }
+
 }

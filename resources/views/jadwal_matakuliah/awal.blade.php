@@ -25,7 +25,7 @@
 					<td>{{$x++}}</td>
 					<td>{{$jadwal->mahasiswa->nama or 'Nama Mahasiswa Kosong'}}</td>
 					<td>{{$jadwal->mahasiswa->nim or 'Nim Kosong'}}</td>
-					<td>{{$jadwal->dosen_matakuliah->title or 'Kuliah Kosong'}}</td>
+					<td>{{$jadwal->dosen_matakuliah->matakuliah->title or 'Kuliah Kosong'}}</td>
 					<td>
 						<div class="btn-group" role="group">
 							<a href="{{url('jadwal_matakuliah/edit/'.$jadwal->id)}}" class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="top" title="ubah">
@@ -34,7 +34,7 @@
 							<a href="{{url('jadwal_matakuliah/lihat/'.$jadwal->id)}}" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="top" title="Lihat">
 								<i class="fa fa-eye"></i>
 							</a>
-							<a href="{{url('jadwal_Matakuliah/hapus/'.$jadwal->id)}}" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Hapus">
+							<a href="{{url('jadwal_matakuliah/hapus/'.$jadwal->id)}}" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Hapus">
 								<i class="fa fa-remove"></i>
 							</a>
 						</div>

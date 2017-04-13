@@ -8,8 +8,8 @@ class dosen_matakuliah extends Model
 {
     //
     protected $table='dosen_matakuliah'; //mendefinisikan nama tabel dosen_matakuliah
-    protected $fillable=['dosen_id','matakuiah_id'];
-    protected $guarded =['id'];//mengabaikan aribut id pada saat melakukan insert/delete oleh eloquent
+    protected $fillable=['dosen_id','matakuliah_id'];
+    // protected $guarded =['id'];//mengabaikan aribut id pada saat melakukan insert/delete oleh eloquent
     public function dosen(){ // sebuah fungsi dosen
 
     	return $this->belongsTo(dosen::class); //memberikan nilai return dari fungsi belongsTo yang  merelasikan model dosen dengan model dosen_matakuliah

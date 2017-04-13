@@ -11,6 +11,7 @@ class jadwal_matakuliah extends Model
     // protected $fillable=['mahasiswa_id','ruangan_id','dosen_matakuiah_id'];
     protected $fillable = ['mahasiswa_id','ruangan_id','dosen_matakuliah_id'];
     protected $guarded = ['id'];// mengabaikan atribut id pada saat melakikan insert/update
+    
 
     public function dosen_matakuliah(){ // fungsi dengan nama dosen_matakuliah
     	return $this->belongsTo(dosen_matakuliah::class);// memberikan nilai return dari fungsi belongsTo yang merelasikan dosen_matakuliah dengan banyak jadwal_Matakuliah

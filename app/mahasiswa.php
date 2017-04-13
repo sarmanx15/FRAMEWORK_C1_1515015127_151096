@@ -22,5 +22,15 @@ class mahasiswa extends Model
     public function getUsernameAttribute(){
         return $this->pengguna->username;
     }
-    
+    public function getPasswordAttribute(){
+        return $this->pengguna->password;
+    }
+    public function listMahasiswaDanNim(){
+        $out = [];
+        foreach ($this->all() as $mhs) {
+            $out[$mhs->id] = "{$mhs->nama} ({$mhs->nim})";
+            # code...
+        }
+        return $out;
+    }
 }
